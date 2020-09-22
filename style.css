@@ -1,0 +1,203 @@
+html {
+    cursor: none;
+}
+
+#app {
+    height: 100vh; /* 全画面表示 */
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+#top {
+    height: 100vh; /* 全画面表示 */
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#end {
+    height: 100vh; /* 全画面表示 */
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: red;
+    border-radius: 50%;
+    transform: translate(0,0);
+    transition: transform 0s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#drager {
+    font-size: 30px;
+    color: white;
+}
+
+#message {
+    font-size: 50px;
+    color: black;
+}
+
+.ball {
+    pointer-events: none;
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: blue;
+    border-radius: 50%;
+    transform: translate(0,0);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    font-size: 30px;
+    color: white;
+    z-index: 1;
+}
+
+.button {
+    width: 20vw;
+    height: 15vh;
+    font-size: large;
+}
+
+#face{
+    border-radius    : 100%;
+    border           : 2px solid #000;
+    background-color : #ee9873;
+    position         : relative;
+    width            : 200px;
+    height           : 180px;
+    z-index          : 1;
+}
+#face .eye{
+    background-color : #000;
+    border-radius    : 100%;
+    position         : absolute;
+    height           : 30px;
+    width            : 20px;
+    top              : 36px;
+    left             : 63px;
+    z-index          : 4;
+}
+#face .eye + .eye{
+    left : 117px;
+}
+#face .eye::after{
+    content       : '';
+    display       : block;
+    position      : absolute;
+    top           : -15px;
+    left          : -2px;
+    height        : 20px;
+    width         : 20px;
+    transform     : rotate(-45deg);
+    z-index       : 2;
+    border-radius : 0px 37px 0px 0px;
+    border-style  : solid solid none none;
+    border-color  : #000;
+}
+#face .nose{
+    width            : 55px;
+    height           : 45px;
+    border-radius    : 100%;
+    background-color : #e6340c;
+    border           : 2px solid #000;
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    right            : 0;
+    bottom           : 0;
+    margin           : auto;
+    z-index          : 3;
+}
+#face .nose::before{
+    content          : '';
+    width            : 10px;
+    height           : 10px;
+    display          : block;
+    background-color : #FFF;
+    position         : absolute;
+    top              : 14px;
+    left             : 25px;
+}
+#face .hoppe{
+    background-color : #000;
+    border-radius    : 64px 64px 64px 64px / 64px 64px 64px 64px;
+    width            : 60px;
+    height           : 64px;
+    position         : absolute;
+    top              : 60px;
+    left             : 14px;
+    z-index          : 1;
+}
+#face .nose + .hoppe{
+    left : 127px;
+}
+#face .hoppe::before{
+    content          : '';
+    background-color : #e95407;
+    display          : block;
+    border-radius    : 40px 60px 60px 40px / 60px 60px 60px 60px;
+    width            : 60px;
+    height           : 60px;
+    top              : 2px;
+    right            : 1px;
+    position         : absolute;
+}
+#face .nose + .hoppe::before{
+    border-radius : 60px 40px 40px 60px / 60px 60px 60px 60px;
+    left          : 1px;
+}
+#face .hoppe::after{
+    content          : '';
+    position         : absolute;
+    display          : block;
+    width            : 10px;
+    top              : 15px;
+    left             : 20px;
+    height           : 10px;
+    background-color : #FFF;
+}
+#face .nose + .hoppe::after{
+    top  : 25px;
+    left : 30px;
+}
+/*==mouth==*/
+#face .mouth{
+    height           : 40px;
+    width            : 73px;
+    background-color : #b85054;
+    border-radius    : 0px 0px 73px 73px / 0px 0px 73px 73px;
+    margin-left      : auto;
+    margin-right     : auto;
+    position         : absolute;
+    bottom           : 24px;
+    left             : 62px;
+    border           : 2px solid #000;
+}
